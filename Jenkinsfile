@@ -6,14 +6,10 @@ pipeline {
         echo 'Starting'
       }
     }
-    stage('Compiling') {
-      steps {
-        bat 'javac Start.java'
-      }
-    }
     stage('Testing) {
        steps {
-         bat 'java Start'  
+         bat 'java Start'
+         bat 'javac Start.java'
        }      
     }
   }
